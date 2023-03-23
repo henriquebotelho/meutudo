@@ -1,0 +1,35 @@
+{
+  "name": "meutudo-wp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^5.1.15",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-deporder": "^1.2.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-px2rem-converter": "^1.6.0",
+    "gulp-strip-debug": "^4.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "postcss-assets": "^6.0.0",
+    "sass": "^1.59.3"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.1.0"
+  }
+}

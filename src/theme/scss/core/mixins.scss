@@ -1,0 +1,50 @@
+@mixin breakpoint($point) {
+  @if $point == xxl {
+    @media (max-width: 1479px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+}
+
+
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #4285f4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #4285f4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #4285f4;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
