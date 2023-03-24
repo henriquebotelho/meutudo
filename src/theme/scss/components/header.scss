@@ -1,0 +1,73 @@
+@import '../core/mixins';
+@import '../core/vars';
+
+.header {
+  max-height: 85px;
+  background-color: transparentize($color: $colorWhite, $amount: 0.5);
+  transition: all ease 0.3s;
+
+  &.scrolling {
+    background-color: $colorWhite;
+  }
+
+  .navbar {
+    max-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    li {
+      margin: 0 0 0 20px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      .nav-link {
+        color: $colorBlack;
+        position: relative;
+        padding: 0;
+        font-size: 16px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 0;
+          height: 1px;
+          background-color: transparent;
+          transition: all ease 0.3s;
+        }
+
+        &:hover {
+          &::after {
+            background-color: $colorBlack;
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+
+      &.button {
+        .nav-link {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    max-width: 144px;
+    margin: 0;
+    padding: 0;
+  }
+}

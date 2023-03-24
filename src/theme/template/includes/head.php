@@ -65,19 +65,18 @@
                                                     single_post_title('', true);
                                                 } else {
                                                     bloginfo('name');
-                                                    echo " - ";
-                                                    bloginfo('description');
+                                                    echo " - " . HB_SITE_DESCRIPTION;
                                                 }
                                                 ?>" />
 <?php } else { ?>
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="<?php echo HB_SITE_DESCRIPTION; ?>" />
 <?php } ?>
 
 
 <meta property="og:type" content="website" />
 <meta name="robots" content="index, follow" />
 <meta name="author" content="Henrique Botelho">
-<meta name="description" content="<?php bloginfo('description'); ?>" />
+<meta name="description" content="<?php echo HB_SITE_DESCRIPTION; ?>" />
 
 
 <?php if (is_home()) { ?>
@@ -94,7 +93,7 @@
     <meta property="og:url" content="<?php the_permalink(); ?>" />
 <?php } ?>
 <?php if (is_home()) { ?>
-    <meta property="og:image" content="<?php echo HB_THEME_URL; ?>/images/rb.jpg" />
+    <meta property="og:image" content="<?php echo HB_THEME_URL; ?>/images/share.jpg" />
 <?php } else { ?>
     <meta property="og:image" content="<?php
                                         $image_id = get_post_thumbnail_id();
@@ -128,12 +127,11 @@
                                                     single_post_title('', true);
                                                 } else {
                                                     bloginfo('name');
-                                                    echo " - ";
-                                                    bloginfo('description');
+                                                    echo " - " . HB_SITE_DESCRIPTION;
                                                 }
                                                 ?>" />
 <?php } else { ?>
-    <meta property="og:description" content="" />
+    <meta property="og:description" content="<?php echo HB_SITE_DESCRIPTION; ?>" />
 <?php } ?>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">

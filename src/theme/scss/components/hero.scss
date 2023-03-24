@@ -1,0 +1,33 @@
+@import '../core/mixins';
+@import '../core/vars';
+
+.hero {
+  background-image: url(images/section_1_1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+
+  .title {
+    font-weight: 400;
+    color: $colorWhite;
+
+    span {
+      position: relative;
+      z-index: 0;
+      font-weight: 700;
+      padding: 0 8px;
+      
+      &:before {
+        content: '';
+        background: $corePalette1;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 50%;
+      }
+    }
+  }
+}

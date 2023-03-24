@@ -119,7 +119,7 @@ if (function_exists('acf_add_options_page')) {
 
     acf_add_options_page(array(
         'page_title' => 'Configurações Website',
-        'menu_title' => 'meutudo',
+        'menu_title' => 'MeuTudo',
         'menu_slug' => 'theme-general-settings',
         'capability' => 'edit_posts',
         'redirect' => false,
@@ -132,7 +132,7 @@ if (function_exists('acf_add_options_page')) {
 /*******************************************/
 function change_footer_admin()
 {
-    echo '<span id="footer-thankyou">Desenvolvido por <a href="https://www.meutudo.com.br/" target="_blank">MeuTudo</a></span>';
+    echo '<span id="footer-thankyou">Desenvolvido para <a href="https://www.meutudo.com.br/" target="_blank">MeuTudo</a></span>';
 }
 
 /*******************************************/

@@ -121,7 +121,7 @@ gulp.task('fonts-dist', () => {
 gulp.task('css', gulp.series('images', 'css-dist', () => {
     return gulp.src(css.src)
         .pipe(sass(css.sassOpts))
-        .pipe(pxtorem())
+        //.pipe(pxtorem())
         .pipe(postcss(css.processors))
         .pipe(gulp.dest(css.build))
         .pipe(browsersync ? browsersync.reload({stream: true}) : gutil.noop())
