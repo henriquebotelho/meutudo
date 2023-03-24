@@ -9,6 +9,7 @@
 <?php
   get_header();
   include('components/hero.php');
+  include('components/services.php');
   get_footer(); 
   ?>
 

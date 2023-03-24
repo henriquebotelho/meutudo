@@ -1,0 +1,31 @@
+@import '../core/mixins';
+@import '../core/vars';
+
+.benefits {
+  padding: 72px 0;
+
+  .title {
+    margin-bottom: 32px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding-top: 64px;
+
+    span {
+      display: block;
+      font-weight: 700;
+      color: $colorBlack;
+    }
+
+    .box {
+      padding: 0 15px;
+
+      img {
+        max-width: 60px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

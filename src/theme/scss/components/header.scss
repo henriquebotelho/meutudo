@@ -5,9 +5,15 @@
   max-height: 85px;
   background-color: transparentize($color: $colorWhite, $amount: 0.5);
   transition: all ease 0.3s;
+  -webkit-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0);
+    -moz-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0);
+    box-shadow: 1px 1px 20px -4px rgba($colorBlack,0);
 
   &.scrolling {
     background-color: $colorWhite;
+    -webkit-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0.5);
+    -moz-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0.5);
+    box-shadow: 1px 1px 20px -4px rgba($colorBlack,0.5);
   }
 
   .navbar {
