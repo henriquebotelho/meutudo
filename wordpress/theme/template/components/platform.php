@@ -11,9 +11,7 @@ $plataforma_url_app_store = get_field('plataforma_url_app_store', 'option');
 <section class="platform">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5">
-        <?php echo $plataforma_imagem ? '<img src="' . $plataforma_imagem['url'] . '" alt="' . $plataforma_imagem['alt'] . '" width="' . $plataforma_imagem['width'] . '" height="' . $plataforma_imagem['height'] . '" />' : ''; ?>
-      </div>
+      <?php echo $plataforma_imagem ? '<div class="col-lg-5"><img src="' . $plataforma_imagem['url'] . '" alt="' . $plataforma_imagem['alt'] . '" width="' . $plataforma_imagem['width'] . '" height="' . $plataforma_imagem['height'] . '" /></div>' : ''; ?>
       <div class="col-lg-6 offset-lg-1">
         <?php
         echo $plataforma_pre_titulo ? '<span class="pre-title">' . $plataforma_pre_titulo . '</span>' : '';

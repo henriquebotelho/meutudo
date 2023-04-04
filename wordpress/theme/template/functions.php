@@ -69,30 +69,9 @@ function change_logo_class($html)
 // HABILITA MENUS E SIDEBARS
 /*******************************************/
 register_nav_menu('menu_header', 'Menu Principal');
-register_sidebar(array(
-    'name' => __('Rodapé Um', 'meutudo'),
-    'id' => 'footer-1',
-    'before_widget' => '<div class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
-    'after_title' => '</h4>',
-));
-register_sidebar(array(
-    'name' => __('Rodapé Dois', 'meutudo'),
-    'id' => 'footer-2',
-    'before_widget' => '<div class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
-    'after_title' => '</h4>',
-));
-register_sidebar(array(
-    'name' => __('Rodapé Três', 'meutudo'),
-    'id' => 'footer-3',
-    'before_widget' => '<div class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h4 class="widgettitle">',
-    'after_title' => '</h4>',
-));
+register_nav_menu('menu_footer', 'Menu Rodapé');
+register_nav_menu('menu_copyright', 'Menu Políticas');
+
 
 /*******************************************/
 // CLASSE MENU BOOTSTRAP WORDPRESS

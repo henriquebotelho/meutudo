@@ -21,7 +21,7 @@ $info_url_linkedin = get_field('info_url_linkedin', 'option');
               <ul class="navbar-nav menu">
                 <?php
                 wp_nav_menu([
-                  'menu' => 'Menu Principal',
+                  'theme_location' => 'menu_header',
                   'items_wrap' => '%3$s',
                   'container' => false,
                   'depth' => 2,
