@@ -1,0 +1,144 @@
+@import '../../scss/core/mixins';
+@import '../../scss/core/vars';
+
+.footer {
+  padding: 48px 0;
+  margin: 0;
+  background-color: $colorGray;
+
+  .widget{
+    @include breakpoint(lg) {
+      margin: 0 0 40px 0;
+    }
+  }
+
+  h4 {
+    font-weight: 700;
+    padding: 16px 0;
+    font-size: 16px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    &.inline {
+      margin-top: 48px;
+
+      @include breakpoint(lg) {
+        margin-top: 0;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 16px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 0;
+      line-height: 32px;
+      font-size: 16px;
+
+      a {
+        color: $colorBlack;
+        text-decoration: none;
+        position: relative;
+        padding: 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 0;
+          height: 1px;
+          background-color: transparent;
+          transition: all ease 0.3s;
+        }
+
+        &:hover {
+          &::after {
+            background-color: $colorBlack;
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    margin: 24px 0 0 0;
+
+    a {
+      text-decoration: none;
+
+      svg,
+      path {
+        transition: all ease 0.3s;
+      }
+
+      &:hover {
+        svg {
+          color: $corePalette1;
+
+          path {
+            fill: $corePalette1;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-list {
+    h5,
+    a {
+      font-size: 16px;
+    }
+
+    .item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: flex;
+        text-decoration: none;
+        color: $colorBlack;
+        display: flex;
+        align-items: center;
+
+        span,
+        svg {
+          transition: all ease 0.3s;
+        }
+
+        span {
+          margin-left: 5px;
+        }
+
+        &:hover {
+          svg {
+            color: $corePalette1;
+
+            path {
+              fill: $corePalette1;
+            }
+          }
+
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
