@@ -1,7 +1,7 @@
 <section class="benefits">
   <div class="container">
     <div class="row">
-      <div class="col-6 offset-3 text-center">
+      <div class="col-lg-6 offset-lg-3 text-center">
         <span class="pre-title">VANTAGENS</span>
         <h3 class="title small black">Melhore a sua vida financeira com eficiência e tecnologia</h3>
         <p>Somos contra grandes bancos, financeiras e intermediários que só querem lucrar com você. Nosso pensamento é diferente.</p>

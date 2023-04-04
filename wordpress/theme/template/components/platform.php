@@ -1,10 +1,10 @@
 <section class="platform">
   <div class="container">
     <div class="row">
-      <div class="col-5">
+      <div class="col-lg-5">
         <img src="<?php echo HB_THEME_URL; ?>images/web_view_our_platform.png" alt="" />
       </div>
-      <div class="col-6 offset-1">
+      <div class="col-lg-6 offset-lg-1">
         <span class="pre-title">Nossa Plataforma</span>
         <h3 class="title small black">No site ou no aplicativo, as melhores oportunidades de crédito para você</h3>
         <ul class="list-check">

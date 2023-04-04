@@ -1,7 +1,7 @@
 <section class="services">
   <div class="container">
     <div class="row">
-      <div class="col-3">
+      <div class="col-lg-3">
         <div class="card">
           <div class="card-body">
             <img src="<?php echo HB_THEME_URL; ?>images/web_newloan.png" alt="" />
@@ -11,7 +11,7 @@
           <a href="javascript:void(0)" class="button rounded">Simule agora</a>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3">
         <div class="card">
           <div class="card-body">
             <img src="<?php echo HB_THEME_URL; ?>images/web_portability.png" alt="" />
@@ -21,7 +21,7 @@
           <a href="javascript:void(0)" class="button rounded">Simule agora</a>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3">
         <div class="card">
           <div class="card-body">
             <img src="<?php echo HB_THEME_URL; ?>images/web_birthday_withdraw.png" alt="" />
@@ -31,7 +31,7 @@
           <a href="javascript:void(0)" class="button rounded">Simule agora</a>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3">
         <div class="card">
           <div class="card-body">
             <img src="<?php echo HB_THEME_URL; ?>images/web_newloan.png" alt="" />

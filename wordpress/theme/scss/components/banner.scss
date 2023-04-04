@@ -12,9 +12,19 @@
     margin: 0 auto;
     padding: 0 16px;
 
+    @include breakpoint(lg) {
+      flex-direction: column;
+      padding: 24px;
+      margin-top: 64px;
+    }
+
     img {
       max-width: 200px;
       margin: -28px 0;
+
+      @include breakpoint(lg) {
+        margin: -64px 0 32px 0;
+      }
     }
 
     .text {

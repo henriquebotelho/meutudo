@@ -1,7 +1,7 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-2">
+      <div class="col-lg-2">
         <a href="#">
           <img src="<?php echo HB_THEME_URL; ?>images/web_meutudo-footer.png" alt="" />
         </a>
@@ -43,7 +43,7 @@
           </a>
         </div>
       </div>
-      <div class="col-3 offset-lg-1">
+      <div class="col-lg-3 offset-lg-1">
         <div class="widget">
           <h4>Institucional</h4>
           <ul>
@@ -57,7 +57,7 @@
           </ul>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3">
         <div class="widget">
           <h4>Contatos</h4>
           <div class="contact-list">
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
+      <div class="col-lg-3">
         <div class="widget">
           <h4>Horário de atendimento</h4>
           <ul>

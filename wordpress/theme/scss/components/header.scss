@@ -5,15 +5,35 @@
   max-height: 85px;
   background-color: transparentize($color: $colorWhite, $amount: 0.5);
   transition: all ease 0.3s;
-  -webkit-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0);
-    -moz-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0);
-    box-shadow: 1px 1px 20px -4px rgba($colorBlack,0);
+  -webkit-box-shadow: 1px 1px 20px -4px rgba($colorBlack, 0);
+  -moz-box-shadow: 1px 1px 20px -4px rgba($colorBlack, 0);
+  box-shadow: 1px 1px 20px -4px rgba($colorBlack, 0);
+
+  @include breakpoint(lg) {
+    background-color: $colorWhite;
+    max-height: none;
+
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+      box-shadow: none;
+
+      svg {
+        width: 30px;
+      }
+    }
+
+    .menuContainer {
+      background-color: $colorWhite;
+      padding: 24px 16px;
+    }
+  }
 
   &.scrolling {
     background-color: $colorWhite;
-    -webkit-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0.5);
-    -moz-box-shadow: 1px 1px 20px -4px rgba($colorBlack,0.5);
-    box-shadow: 1px 1px 20px -4px rgba($colorBlack,0.5);
+    -webkit-box-shadow: 1px 1px 20px -4px rgba($colorBlack, 0.5);
+    -moz-box-shadow: 1px 1px 20px -4px rgba($colorBlack, 0.5);
+    box-shadow: 1px 1px 20px -4px rgba($colorBlack, 0.5);
   }
 
   .navbar {
@@ -21,6 +41,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(lg) {
+      background-color: $colorWhite;
+      max-height: none;
+    }
   }
 
   .menu {
@@ -28,8 +53,16 @@
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint(lg) {
+      align-items: flex-start;
+    }
+
     li {
       margin: 0 0 0 20px;
+
+      @include breakpoint(lg) {
+        margin: 0 0 16px 0;
+      }
 
       &:first-child {
         margin-left: 0;

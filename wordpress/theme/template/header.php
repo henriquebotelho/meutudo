@@ -7,7 +7,7 @@ $info_url_linkedin = get_field('info_url_linkedin', 'option');
 <header class="header fixed-top">
   <div class="container-xl">
     <div class="row">
-      <div class="col-12">
+      <div class="col-lg-12">
         <nav class="navbar navbar-expand-lg navbar-light">
           <?php function_exists('the_custom_logo') ? the_custom_logo() : '' ?>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

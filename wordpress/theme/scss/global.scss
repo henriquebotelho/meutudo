@@ -132,6 +132,10 @@ p {
   &:not(.nav-item) {
     min-width: 190px;
     display: inline-block;
+
+    @include breakpoint(xl) {
+      min-width: 0;
+    }
   }
 
   &:hover {
