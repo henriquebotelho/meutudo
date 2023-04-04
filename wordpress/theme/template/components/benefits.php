@@ -1,42 +1,45 @@
+<?php
+$vantagens_pre_titulo = get_field('vantagens_pre_titulo', 'option');
+$vantagens_titulo = get_field('vantagens_titulo', 'option');
+$vantagens_descricao = get_field('vantagens_descricao', 'option');
+?>
+
 <section class="benefits">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 offset-lg-3 text-center">
-        <span class="pre-title">VANTAGENS</span>
-        <h3 class="title small black">Melhore a sua vida financeira com eficiência e tecnologia</h3>
-        <p>Somos contra grandes bancos, financeiras e intermediários que só querem lucrar com você. Nosso pensamento é diferente.</p>
+        <?php
+        echo $vantagens_pre_titulo ? '<span class="pre-title">' . $vantagens_pre_titulo . '</span>' : '';
+        echo $vantagens_pre_titulo ? '<h3 class="title small black">' . $vantagens_pre_titulo . '</h3>' : '';
+        echo $vantagens_descricao;
+        ?>
       </div>
     </div>
-    <div class="grid">
-      <div class="box">
-        <img src="<?php echo HB_THEME_URL; ?>images/web_clock_benefits.png" alt="" />
-        <span>Rápido</span>
-        <p>Pagamento via PIX a partir de 10 minutos.</p>
-      </div>
+    <?php
+    if (have_rows('vantagens_lista', 'option')) { ?>
 
-      <div class="box">
-        <img src="<?php echo HB_THEME_URL; ?>images/web_check_benefits.png" alt="" />
-        <span>Seguro</span>
-        <p>Regulamentado pelo Banco Central e com a melhor tecnologia antifraude.</p>
-      </div>
+      <div class="grid">
+        <?php
+        while (have_rows('vantagens_lista', 'option')) {
+          the_row();
 
-      <div class="box">
-        <img src="<?php echo HB_THEME_URL; ?>images/web_digital_benefits.png" alt="" />
-        <span>100% digital</span>
-        <p>Via aplicativo ou site a melhor experiência onde e quando quiser.</p>
+          $icone = get_sub_field('icone');
+          $titulo = get_sub_field('titulo');
+          $descricao = get_sub_field('descricao');
+        ?>
+          <div class="box">
+            <?php
+            echo $icone ? '<img src="' . $icone['url'] . '" alt="' . $icone['alt'] . '" width="' . $icone['width'] . '" height="' . $icone['height'] . '" />' : '';
+            echo $titulo ? '<span>' . $titulo . '</span>' : '';
+            echo $descricao;
+            ?>
+          </div>
+        <?php } ?>
       </div>
-
-      <div class="box">
-        <img src="<?php echo HB_THEME_URL; ?>images/web_smile_benefits.png" alt="" />
-        <span>Humano</span>
-        <p>Atendimento personalizado feito por gente que te ajuda de verdade.</p>
-      </div>
-
-      <div class="box">
-        <img src="<?php echo HB_THEME_URL; ?>images/web_rate_benefits.png" alt="" />
-        <span>Econômico</span>
-        <p>Taxas de juros até 30% mais baixas. O crédito mais barato do Brasil.</p>
-      </div>
-    </div>
+    <?php
+      wp_reset_query();
+      wp_reset_postdata();
+    }
+    ?>
   </div>
 </section>

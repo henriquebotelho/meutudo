@@ -1,48 +1,37 @@
 <section class="services">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="<?php echo HB_THEME_URL; ?>images/web_newloan.png" alt="" />
-            <h2>Empréstimo Consignado</h2>
-            <p>para beneficiários do INSS e pagamento a partir de 10 minutos.</p>
+  <?php if (have_rows('services_cards', 'option')) { ?>
+    <div class="container">
+      <div class="row">
+        <?php
+        while (have_rows('services_cards', 'option')) {
+          the_row();
+
+          $icone = get_sub_field('icone');
+          $titulo = get_sub_field('titulo');
+          $descricao = get_sub_field('descricao');
+          $link_do_botao = get_sub_field('link_do_botao');
+        ?>
+          <div class="col-lg-3">
+            <div class="card">
+              <div class="card-body">
+                <?php
+                echo $icone ? '<img src="' . $icone['url'] . '" alt="' . $icone['alt'] . '" width="' . $icone['width'] . '" height="' . $icone['height'] . '" />' : '';
+                echo $titulo ? '<h2>' . $titulo . '</h2>' : '';
+                echo $descricao;
+                ?>
+              </div>
+              <?php echo $link_do_botao ? '<a href="' . $link_do_botao['url'] . '" ' . ($link_do_botao['target'] ? 'target="' . $link_do_botao['target'] . '"' : '') . ' class="button rounded">' . $link_do_botao['title'] . '</a>' : ''; ?>
+            </div>
           </div>
-          <a href="javascript:void(0)" class="button rounded">Simule agora</a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="<?php echo HB_THEME_URL; ?>images/web_portability.png" alt="" />
-            <h2>Portabilidade do Consignado</h2>
-            <p>livre-se de taxas abusivas e pague até 30% mais barato.</p>
-          </div>
-          <a href="javascript:void(0)" class="button rounded">Simule agora</a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="<?php echo HB_THEME_URL; ?>images/web_birthday_withdraw.png" alt="" />
-            <h2>Antecipação Saque-Aniversário FGTS</h2>
-            <p>antecipe seu saldo FGTS e realize o que quiser. Sem parcela mensal.</p>
-          </div>
-          <a href="javascript:void(0)" class="button rounded">Simule agora</a>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="<?php echo HB_THEME_URL; ?>images/web_newloan.png" alt="" />
-            <h2>Auxílio Brasil</h2>
-            <p>para beneficiários do Auxílio Brasil com uma das menores taxas do mercado.</p>
-          </div>
-          <a href="javascript:void(0)" class="button rounded">Simule agora</a>
-        </div>
+        <?php
+        }
+        wp_reset_query();
+        wp_reset_postdata();
+        ?>
       </div>
     </div>
-  </div>
-  <?php include('benefits.php') ?>
+  <?php
+  }
+  include('benefits.php') ?>
   <?php include('platform.php') ?>
 </section>
