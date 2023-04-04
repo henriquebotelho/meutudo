@@ -1,0 +1,36 @@
+@import '../core/mixins';
+@import '../core/vars';
+
+.banner {
+  .wrapper {
+    max-width: 900px;
+    background-color: $colorBlack;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    img {
+      max-width: 200px;
+      margin: -28px 0;
+    }
+
+    .text {
+      max-width: 500px;
+
+      p {
+        color: $colorWhite;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 34px;
+        margin-bottom: 0;
+
+        span {
+          color: $corePalette1;
+        }
+      }
+    }
+  }
+}

@@ -44,4 +44,5 @@
     </div>
   </div>
   <?php include('benefits.php') ?>
+  <?php include('platform.php') ?>
 </section>

@@ -1,9 +1,26 @@
 .services {
   margin-top: -95px;
+  position: relative;
 
-  background-image: url('images/shape_1.png');
-  background-position: left 95px;
-  background-repeat: no-repeat;
+  &::before {
+    content: url('images/shape_1.png');
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 0;
+  }
+  &::after {
+    content: url('images/shape_2.png');
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  .container{
+    position: relative;
+    z-index: 1;
+  }
 
   .card {
     border-radius: 24px;

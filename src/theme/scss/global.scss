@@ -129,6 +129,11 @@ p {
   transition: all ease 0.3s;
   text-decoration: none;
 
+  &:not(.nav-item) {
+    min-width: 190px;
+    display: inline-block;
+  }
+
   &:hover {
     background-color: $colorBlack;
     color: $colorWhite;
@@ -163,6 +168,30 @@ p {
       .nav-link {
         color: $colorWhite !important;
       }
+    }
+  }
+}
+
+.list-check {
+  margin: 32px 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    display: flex;
+    flex: 0 0 20px;
+    margin: 0 0 12px 0;
+    font-size: 16px;
+
+    &::before {
+      content: '';
+      display: block;
+      background: url(images/check.svg) no-repeat center;
+      background-size: cover;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 16px;
     }
   }
 }

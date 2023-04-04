@@ -1,0 +1,18 @@
+@import '../core/mixins';
+@import '../core/vars';
+
+
+.platform {
+  .store {
+    display: flex;
+
+    a {
+      margin-right: 10px;
+      text-decoration: none;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

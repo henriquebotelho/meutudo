@@ -10,6 +10,9 @@
   get_header();
   include('components/hero.php');
   include('components/services.php');
+  include('components/purpose.php');
+  include('components/banner.php');
+  include('components/download.php');
   get_footer(); 
   ?>
 
