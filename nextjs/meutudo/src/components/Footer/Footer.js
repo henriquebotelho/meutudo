@@ -122,7 +122,7 @@ const Footer = () => {
         </div>
         <div className="row">
           <div className="col">
-            <ul class={style.inline}>
+            <ul className={style.inline}>
               <li><a href="#politica">Política de privacidade</a></li>
               <li><a href="#termos">Termos de uso</a></li>
             </ul>

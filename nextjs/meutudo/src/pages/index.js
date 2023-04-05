@@ -7,7 +7,13 @@ import Banner from '@/components/Banner/Banner'
 import Download from '@/components/Download/Download'
 import Footer from '@/components/Footer/Footer'
 
-export default function Home() {
+export default function Home(pageData) {
+  const heroData = pageData.pageData.section_1 || []
+  const servicesData = {services: pageData.pageData.section_2, benefits: pageData.pageData.section_3, platform: pageData.pageData.section_4} || []
+  const purposeData = pageData.pageData.section_5 || []
+  const bannerData = pageData.pageData.section_6 || []
+  const downloadData = pageData.pageData.section_7 || []
+
   return (
     <>
       <Head>
@@ -18,13 +24,19 @@ export default function Home() {
       </Head>
       <>
         <Header />
-        <Hero />
-        <Services />
-        <Purpose />
-        <Banner />
-        <Download />
+        <Hero data={heroData} />
+        <Services data={servicesData} />
+        <Purpose data={purposeData} />
+        <Banner data={bannerData} />
+        <Download data={downloadData} />
         <Footer />
       </>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch('https://api.npoint.io/c0aa695f90022f632041');
+  const pageData = await res.json();
+  return { props: { pageData }, revalidate: 3600 };
 }

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import style from './Download.module.scss'
 
-const Download = () => {
+const Download = ({ data }) => {
   return (
     <section className={style.download}>
       <div className="container">
@@ -15,7 +15,7 @@ const Download = () => {
                 alt='MeuTudo'
               />
               <div className={style.text}>
-                <h2>Baixe o aplicativo meutudo<span>.</span> e confira todas as suas oportunidades.</h2>
+                {data.text && <h2 dangerouslySetInnerHTML={{ __html: data.text }} />}
                 <div className={style.store}>
                   <a href="https://google.com" target="_blank">
                     <Image
