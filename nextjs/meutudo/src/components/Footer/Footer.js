@@ -1,30 +1,26 @@
 import React from "react"
+import Image from 'next/image'
 
 import style from './Footer.module.scss'
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={style.footer}>
       <div className="container">
         <div className="row">
           <div className="col-lg-2">
-            <a href="#">
-              <img src="<?php echo HB_THEME_URL; ?>images/web_meutudo-footer.png" alt="" />
-            </a>
-            <?php if ($url_facebook || $url_instagram || $url_linkedin || $url_youtube) { ?>
-          <div className="social">
-            <?php if ($url_facebook) { ?>
-              <a href="<?php echo $url_facebook; ?>" target="_blank" rel="noopener noreferrer">
+            <Image
+              src={require('../../public/images/logo2.webp')}
+              alt='MeuTudo'
+            />
+            <div className={style.social}>
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <svg width="35" height="30" data-name="Grupo 2640" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.254 30.255">
                   <path d="M13.171 22.927h3.043a.473.473 0 0 0 .473-.473v-6.849h1.581a.472.472 0 0 0 .47-.424l.267-2.587a.473.473 0 0 0-.47-.521h-1.847v-1.048c0-.216.068-.233.173-.233h1.636a.473.473 0 0 0 .473-.473V7.807a.473.473 0 0 0-.471-.473l-2.256-.009a3.328 3.328 0 0 0-2.854 1.279 3.891 3.891 0 0 0-.689 2.266v1.2h-.974a.473.473 0 0 0-.473.473v2.587a.473.473 0 0 0 .473.473h.973v6.849a.473.473 0 0 0 .472.475zm-.975-8.267v-1.645h.975a.473.473 0 0 0 .473-.473v-1.674a3 3 0 0 1 .505-1.705 2.433 2.433 0 0 1 2.09-.894l1.783.007v1.568h-1.163a1.088 1.088 0 0 0-1.119 1.178v1.52a.473.473 0 0 0 .473.473h1.8l-.169 1.641h-1.627a.473.473 0 0 0-.473.473v6.849h-2.1v-6.849a.473.473 0 0 0-.473-.473z"></path>
                   <path d="M25.824 4.431a15.129 15.129 0 1 0 4.431 10.7 15.028 15.028 0 0 0-4.431-10.7zm-.668 20.725a14.183 14.183 0 1 1 4.154-10.029 14.089 14.089 0 0 1-4.155 10.029z"></path>
                 </svg>
               </a>
-            <?php
-            }
-            if ($url_instagram) {
-            ?>
-              <a href="<?php echo $url_instagram; ?>" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <svg width="35" height="30" data-name="Grupo 2639" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.108 30.109">
                   <g>
                     <path d="M25.699 4.409a15.055 15.055 0 1 0 4.409 10.645 14.955 14.955 0 0 0-4.409-10.645zm-.665 20.625a14.114 14.114 0 1 1 4.134-9.98 14.02 14.02 0 0 1-4.134 9.98z"></path>
@@ -36,11 +32,7 @@ const Footer = () => {
                   </g>
                 </svg>
               </a>
-            <?php
-            }
-            if ($url_linkedin) {
-            ?>
-              <a href="<?php echo $url_linkedin; ?>" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <svg width="35" height="30" data-name="Grupo 2636" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.255 30.255">
                   <path d="M25.824 4.431a15.128 15.128 0 1 0 4.431 10.7 15.028 15.028 0 0 0-4.431-10.7zm-.669 20.725a14.182 14.182 0 1 1 4.154-10.029 14.089 14.089 0 0 1-4.154 10.029z"></path>
                   <path d="M19.245 22.048h2.93a.473.473 0 0 0 .473-.473v-5.057a4.733 4.733 0 0 0-1.09-3.319 3.633 3.633 0 0 0-2.757-1.12 3.393 3.393 0 0 0-2.167.688v-.008a.473.473 0 0 0-.473-.473h-2.929a.473.473 0 0 0-.472.494c.037.8 0 8.708 0 8.788a.473.473 0 0 0 .473.475h2.929a.473.473 0 0 0 .473-.473v-4.922a1.587 1.587 0 0 1 .062-.537 1.154 1.154 0 0 1 1.065-.777c.277 0 1.012 0 1.012 1.521v4.715a.473.473 0 0 0 .471.478zm-1.484-7.654a2.062 2.062 0 0 0-1.94 1.365 2.33 2.33 0 0 0-.132.894v4.449h-1.981c.007-1.528.025-6.232.007-7.866h1.974v.775a.473.473 0 0 0 .869.257 2.429 2.429 0 0 1 2.243-1.239c1.843 0 2.9 1.273 2.9 3.493v4.58H19.72V16.86a3.007 3.007 0 0 0-.426-1.707 1.76 1.76 0 0 0-1.534-.763z"></path>
@@ -48,11 +40,7 @@ const Footer = () => {
                   <path d="M8.682 12.286a.473.473 0 0 0-.473.473v8.812a.473.473 0 0 0 .473.473h2.931a.473.473 0 0 0 .473-.473v-8.809a.473.473 0 0 0-.473-.473zm2.458 8.812H9.155v-7.866h1.985z"></path>
                 </svg>
               </a>
-            <?php
-            }
-            if ($url_youtube) {
-            ?>
-              <a href="<?php echo $url_youtube; ?>" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <svg width="35" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.468 30.109">
                   <g>
                     <path d="M25.152 4.41a14.513 14.513 0 0 0-20.837 0 15.287 15.287 0 0 0 0 21.291 14.514 14.514 0 0 0 20.837 0 15.288 15.288 0 0 0 0-21.291zm-.651 20.626a13.607 13.607 0 0 1-19.534 0 14.332 14.332 0 0 1 0-19.96 13.605 13.605 0 0 1 19.534 0 14.333 14.333 0 0 1 0 19.96z"></path>
@@ -61,45 +49,33 @@ const Footer = () => {
                   </g>
                 </svg>
               </a>
-            <?php } ?>
+            </div>
           </div>
-        <? php } ?>
+          <div className="col-lg-3 offset-lg-1">
+            <div className={style.widget}>
+              <h4>Institucional</h4>
+              <ul>
+                <li><a href="#simule">Simule agora</a></li>
+                <li><a href="#ajuda">Ajuda</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#carreiras">Carreiras</a></li>
+                <li><a href="#mapa">Mapa do site</a></li>
+                <li><a href="#demonstracoes">Demosntrações financeiras</a></li>
+              </ul>
+            </div>
           </div>
-          <?php if (has_nav_menu('menu_footer')) { ?>
-        <div className="col-lg-3 offset-lg-1">
-          <div className="widget">
-            <h4>Institucional</h4>
-            <ul>
-              <?php
-              wp_nav_menu([
-                'theme_location' => 'menu_footer',
-                'items_wrap' => '%3$s',
-                'container' => false,
-                'depth' => 2
-              ]);
-              ?>
-            </ul>
-          </div>
-        </div>
-      <? php
-      }
-          if ($telefone_capitais || $telefone_outras_localidades || $email_suporte) { ?>
-        <div className="col-lg-3">
-          <div className="widget">
-            <h4>Contatos</h4>
-            <div className="contact-list">
-              <?php if ($email_suporte) { ?>
-                <div className="item">
+          <div className="col-lg-3">
+            <div className={style.widget}>
+              <h4>Contatos</h4>
+              <div className={style['contact-list']}>
+                <div className={style.item}>
                   <h5>Suporte</h5>
-                  <a href="mailto:<?php echo $email_suporte ?>" target="_blank" rel="noopener noreferrer"><?php echo $email_suporte ?></a>
+                  <a href="mailto:suporte@meutudo.app" target="_blank" rel="noopener noreferrer">suporte@meutudo.app</a>
                 </div>
-              <?php
-              }
-              if ($telefone_capitais) {
-              ?>
-                <div className="item">
+                <div className={style.item}>
                   <h5>Capitais e regiões metropolitanas</h5>
-                  <a href="tel:<?php echo str_replace(array('-', ' '), '', $telefone_capitais) ?>" target="_blank" rel="noopener noreferrer">
+                  <a href="tel:40001836" target="_blank" rel="noopener noreferrer">
                     <svg width="35" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.162 30.162">
                       <g>
                         <path d="M25.745 4.418a15.082 15.082 0 1 0 4.417 10.664 14.982 14.982 0 0 0-4.417-10.664zm-.666 20.661a14.139 14.139 0 1 1 4.141-10 14.046 14.046 0 0 1-4.142 10z"></path>
@@ -111,16 +87,13 @@ const Footer = () => {
                         <path d="M16.097 12.859a1.086 1.086 0 0 1 1.083 1.083.443.443 0 1 0 .886 0 1.974 1.974 0 0 0-1.968-1.968.443.443 0 0 0 0 .886z"></path>
                       </g>
                     </svg>
-                    <span><?php echo $telefone_capitais ?></span>
+                    <span>4000 1836</span>
                   </a>
                 </div>
-              <?php
-              }
-              if ($telefone_outras_localidades) {
-              ?>
-                <div className="item">
+                <div className={style.item}>
                   <h5>Demais localidades</h5>
-                  <a href="<?php echo str_replace(array('-', ' '), '', $telefone_outras_localidades) ?>" target="_blank" rel="noopener noreferrer"><svg width="35" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.162 30.162">
+                  <a href="tel:08007008836" target="_blank" rel="noopener noreferrer">
+                    <svg width="35" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.162 30.162">
                       <g>
                         <path d="M25.745 4.418a15.082 15.082 0 1 0 4.417 10.664 14.982 14.982 0 0 0-4.417-10.664zm-.666 20.661a14.139 14.139 0 1 1 4.141-10 14.046 14.046 0 0 1-4.142 10z"></path>
                       </g>
@@ -131,48 +104,32 @@ const Footer = () => {
                         <path d="M16.097 12.859a1.086 1.086 0 0 1 1.083 1.083.443.443 0 1 0 .886 0 1.974 1.974 0 0 0-1.968-1.968.443.443 0 0 0 0 .886z"></path>
                       </g>
                     </svg>
-                    <span><?php echo $telefone_outras_localidades ?></span>
+                    <span>0800 700 8836</span>
                   </a>
                 </div>
-              <?php } ?>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3">
+            <div className={style.widget}>
+              <h4>Horário de atendimento</h4>
+              <ul>
+                <li>Segunda a Sexta: 08:00 - 20:00</li>
+                <li>Sábado: 08:00 - 16:00</li>
+              </ul>
             </div>
           </div>
         </div>
-      <? php
-      }
-          if ($horario_de_funcionamento) {
-      ?>
-        <div className="col-lg-3">
-          <div className="widget">
-            <h4>Horário de atendimento</h4>
-            <ul>
-              <?php
-              $replaceTag = str_replace(array("<p>", "</p>"), array("<li>", "</li>"), $horario_de_funcionamento);
-              echo $replaceTag;
-              ?>
+        <div className="row">
+          <div className="col">
+            <ul class={style.inline}>
+              <li><a href="#politica">Política de privacidade</a></li>
+              <li><a href="#termos">Termos de uso</a></li>
             </ul>
           </div>
         </div>
-      <? php } ?>
-        </div>
-        <?php if (has_nav_menu('menu_copyright')) { ?>
-      <div className="row">
-        <div className="col">
-          <ul className="inline">
-          <?php
-              wp_nav_menu([
-                'theme_location' => 'menu_copyright',
-                'items_wrap' => '%3$s',
-                'container' => false,
-                'depth' => 2
-              ]);
-              ?>
-          </ul>
-        </div>
       </div>
-    <? php } ?>
-      </div>
-    </footer>
+    </footer >
   )
 }
 

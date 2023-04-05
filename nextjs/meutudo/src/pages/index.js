@@ -5,6 +5,7 @@ import Services from '@/components/Services/Services'
 import Purpose from '@/components/Purpose/Purpose'
 import Banner from '@/components/Banner/Banner'
 import Download from '@/components/Download/Download'
+import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (
